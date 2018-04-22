@@ -20,7 +20,7 @@
     height: auto;
 }
 
-#nav_bar nav {
+#nav_bar .en {
     display: block;
     text-align: center;
     position: absolute;
@@ -30,7 +30,7 @@
     width: 100%;
 }
 
-#nav_bar nav a {
+#nav_bar .en a {
     font-size: 22px;
     color: #383838;
     display: block;
@@ -45,42 +45,61 @@
     opacity: 1 !important;
 }
 
-#nav_bar nav a b {
+#nav_bar .en a b {
     font-size: 22px;
     color: #e7e7e7;
     display: none;
 }
 
-#nav_bar nav a:hover b {
+#nav_bar .en a:hover b {
     font-size: 12px;
     color: #e7e7e7;
     display: block;
+    font-family: Roboto;
 }
 
-#nav_bar nav a:hover i {
+#nav_bar .en a:hover i {
     display: none;
 }
 
-#nav_bar ul {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
+
+/*contact*/
+
+#nav_bar .contact {
     display: block;
-    padding: 0;
-    list-style: none;
     text-align: center;
-    margin: 0;
+    position: absolute;
+    height: 160px;
+    bottom: -4%;
+    width: 100%;
 }
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+#nav_bar .contact a {
+    font-size: 18px;
+    color: #919191;
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+    text-decoration: none;
+    opacity: 0.5;
 }
 
-li i {
-    color: #fff;
-    font-size: 17px;
-    padding: 10px;
+#nav_bar .contact a b {
+    font-size: 18px;
+    color: #e7e7e7;
+    display: none;
+}
+
+#nav_bar .contact a:hover b {
+    font-size: 12px;
+    color: #e7e7e7;
+    display: block;
+    font-family: Roboto;
+}
+
+#nav_bar .contact a:hover .fas {
+    display: none;
 }
 
 .material-icons {
@@ -121,11 +140,11 @@ body {
 .cube {
     position: relative;
     width: 600px;
-    height: 400px;
+    height: 500px;
     opacity: 1;
     position: absolute;
     top: 0;
-    right: 5%;
+    right: -3%;
     bottom: 0;
     left: auto;
     margin: auto;
@@ -173,8 +192,7 @@ body {
 }
 
 .typewriter h1 {
-    color: rgb(76, 76, 76);
-    font-family: monospace;
+    font-family: Roboto;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     white-space: nowrap;
@@ -203,6 +221,7 @@ body {
 
 #skills {
     background: #181818;
+    color: rgb(118, 118, 118)
 }
 
 .text-zone {
@@ -212,50 +231,117 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 30%;
+    width: 36%;
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
 }
 
-.graph {
+.text-zone a {
+    text-decoration: none;
+    color: #cbcbcb;
+}
+
+.animated-graph {
     will-change: contents;
     margin-top: 50px;
-    width: 40%;
+    width: 500px;
+    height: 500px;
     top: 10%;
     bottom: auto;
     position: absolute;
     left: auto;
-    right: 5%;
+    right: 10%;
+    opacity: 0;
+}
+
+.graph {
+    will-change: contents;
+    width: 500px;
+    height: 500px;
     opacity: 0.5;
+    padding: 0;
+    margin: 0;
 }
 
 .graph-1,
 .graph-2,
 .graph-3 {
     will-change: contents;
-    margin-top: 50px;
-    width: 40%;
-    top: 10%;
-    bottom: auto;
-    position: absolute;
-    left: auto;
-    right: 5%;
+    width: 500px;
     opacity: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.visible {
-    opacity: 1;
+.subject-1,
+.subject-2,
+.subject-3 {
+    position: absolute;
+    top: 0;
+    right: -3.5%;
+    will-change: contents;
+    width: 500px;
+    height: 500px;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.big-circle:hover {}
+.title-3,
+.title-2,
+.title-1 {
+    color: rgb(157, 157, 157);
+    font-family: Roboto;
+    font-size: 1.1em;
+}
+
+.names-programs {
+    color: rgb(177, 177, 177);
+    font-family: monospace;
+    font-size: 0.7em;
+}
+
+#adobe-photoshop {
+    position: absolute;
+    top: 9%;
+    right: 17%;
+}
+
+#adobe-ilustrator {
+    position: absolute;
+    top: 6%;
+    right: 24%;
+}
+
+#adobe-xd {
+    position: absolute;
+    top: 68%;
+    right: 3%;
+}
+
+#figma {
+    position: absolute;
+    top: 62%;
+    right: 2%;
+}
+
+#html-css-js {
+    position: absolute;
+    top: 41%;
+    right: 95%;
+}
+
+#react {
+    position: absolute;
+    top: 47%;
+    right: 95%;
+}
 
 #about {
     background: #181818;
-}
-
-#contact {
-    background: #181818;
+    color: rgb(118, 118, 118)
 }
 
 #work {

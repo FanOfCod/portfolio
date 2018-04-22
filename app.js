@@ -1,4 +1,18 @@
 $(document).ready(function () {
+
+	var span = document.querySelector(".email");
+
+	span.onclick = function() {
+  	document.execCommand("copy");
+	}
+
+	span.addEventListener("copy", function(event) {
+ 	 event.preventDefault();
+ 	 if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", 'mw.majch@gmail.com');
+ 	 }
+	});
+
 	var currentPage;
 	var currentPageName;
 
@@ -8,17 +22,23 @@ $(document).ready(function () {
 	var isChangingPages = false;
 
 	function animationCircle() {
+		$(".animated-graph").animate({
+			"opacity": "1" }, 2000).promise().done(function() {
+
+
 		element = element > 3 ? element = 1 : element; 
 		$(".graph-" + element).animate({
 			"opacity": "1" }, 2000).promise().done(function() {
 
 
 				$(".graph-" + element).animate({
-					"opacity": "0" }, 2000); 
+					"opacity": "0" }, 1000); 
 					
 					element = element+1;
-					setTimeout(animationCircle,1000);
+					setTimeout(animationCircle,100);
 			});
+
+		});
 	};
 
 	$(".menu_item").click(function(e) {
@@ -60,7 +80,7 @@ $(document).ready(function () {
 			if (currentPageName==='skills' && isAnimationRunning === false)
 			{
 				isAnimationRunning = true;
-				setTimeout(animationCircle, 3000);
+				animationCircle();
 			}
 		});
 	};

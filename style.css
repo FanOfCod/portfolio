@@ -38,6 +38,11 @@
     height: 51px;
     position: relative;
     text-decoration: none;
+    opacity: 0.5;
+}
+
+.active_menu_item {
+    opacity: 1 !important;
 }
 
 #nav_bar nav a b {
@@ -109,22 +114,52 @@ body {
     background: #181818;
     font-family: arial;
     font-weight: 600;
-    font-size: 5em;
+    font-size: 1em;
     color: rgb(118, 118, 118)
 }
 
-.container_homepage .img {
-    width: 50%;
+.cube {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    margin-top: 15%;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
-
-/* SKILLS */
-
-#skills {
-    background-color: red;
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-#skills .text-zone {
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+#homepage .text-zone {
     position: absolute;
     left: 10%;
     top: 50%;
@@ -137,14 +172,92 @@ body {
     max-height: 90%;
 }
 
+.typewriter h1 {
+    color: rgb(76, 76, 76);
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* SKILLS */
+
+#skills {
+    background: #181818;
+}
+
+.text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+}
+
+.graph {
+    will-change: contents;
+    margin-top: 50px;
+    width: 40%;
+    top: 10%;
+    bottom: auto;
+    position: absolute;
+    left: auto;
+    right: 5%;
+    opacity: 0.5;
+}
+
+.graph-1,
+.graph-2,
+.graph-3 {
+    will-change: contents;
+    margin-top: 50px;
+    width: 40%;
+    top: 10%;
+    bottom: auto;
+    position: absolute;
+    left: auto;
+    right: 5%;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.big-circle:hover {}
+
 #about {
-    background-color: rgb(81, 0, 255);
+    background: #181818;
 }
 
 #contact {
-    background-color: rgb(0, 255, 187);
+    background: #181818;
 }
 
 #work {
-    background-color: rgb(23, 64, 53);
+    background: #181818;
 }

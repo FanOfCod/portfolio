@@ -10,14 +10,34 @@
 
 .logo {
     display: block;
-    padding: 8px 0;
+    background-image: url(img/logo.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    height: 30px;
+    margin: 15px;
+    width: 30px;
 }
 
-.logo img {
-    display: block;
-    margin: 8px auto;
-    width: 24px;
-    height: auto;
+.logo:hover {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+    45% {
+        height: 30x;
+        margin-top: 10px;
+    }
+    55% {
+        height: 30px;
+        margin-top: 10px;
+    }
+    75% {
+        height: 40px;
+        margin-top: 0px;
+    }
 }
 
 #nav_bar .en {
@@ -138,21 +158,23 @@ body {
 }
 
 .cube {
-    position: relative;
-    width: 600px;
-    height: 500px;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    right: -3%;
-    bottom: 0;
-    left: auto;
-    margin: auto;
-    margin-top: 15%;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    will-change: contents;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    right: -3%;
+    opacity: 1;
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
 }
 
 @-webkit-keyframes fadeIn {
@@ -244,15 +266,18 @@ body {
 
 .animated-graph {
     will-change: contents;
-    margin-top: 50px;
     width: 500px;
     height: 500px;
-    top: 10%;
-    bottom: auto;
     position: absolute;
-    left: auto;
     right: 10%;
     opacity: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
 }
 
 .graph {
@@ -344,6 +369,284 @@ body {
     color: rgb(118, 118, 118)
 }
 
+
+/* WORK */
+
 #work {
     background: #181818;
+}
+
+.row {
+    width: 80%;
+    height: 30%;
+    /*   background: yellow; */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.top {
+    position: absolute;
+    top: 20%;
+    left: 200px;
+}
+
+.bottom {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+}
+
+#mockup {
+    position: absolute;
+    top: 0;
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.description {
+    visibility: hidden;
+    opacity: 0;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+    padding: 0;
+    margin: 0;
+    padding-left: 8px;
+    color: #424242;
+    font-size: 8px;
+    font-family: roboto;
+    z-index: 2;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-color: #808080;
+}
+
+.view-project {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    background: #b3b3b3;
+    -webkit-transform: translate(-50%, -50%);
+    /* Safari and Chrome */
+    -moz-transform: translate(-50%, -50%);
+    /* Firefox */
+    -ms-transform: translate(-50%, -50%);
+    /* IE 9 */
+    -o-transform: translate(-50%, -50%);
+    /* Opera */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    color: #444444;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    font-size: 9px;
+    font-family: roboto;
+}
+
+.project:hover button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project:hover .description {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.project:hover img {
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -moz-transition: all 1s ease;
+    /* Firefox */
+    -o-transition: all 1s ease;
+    /* IE 9 */
+    -ms-transition: all 1s ease;
+    /* Opera */
+    transition: all 1s ease;
+}
+
+.project img {
+    opacity: 0.5;
+}
+
+.project:hover img {
+    -webkit-transform: scale(1.25);
+    /* Safari and Chrome */
+    -moz-transform: scale(1.25);
+    /* Firefox */
+    -ms-transform: scale(1.25);
+    /* IE 9 */
+    -o-transform: scale(1.25);
+    /* Opera */
+    transform: scale(1.25);
+    opacity: 0.8;
+}
+
+
+/* PICS CONTAINER */
+
+.pics-container,
+.mockup-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 60px;
+    background: #181818;
+    z-index: 5;
+    display: none;
+}
+
+.container {
+    text-align: center;
+    background-color: #111;
+    width: 100%;
+    height: 100%
+}
+
+.frame {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    height: 500px;
+    width: 754px;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 60px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.slider-dots {
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+}
+
+.slider-dots li {
+    display: inline;
+    font-size: 20px;
+    margin-right: 5px;
+    color: #bbbcbc;
+    margin-bottom: 20px;
+}
+
+.arrow-next {
+    margin-left: 30px;
+}
+
+.arrow-prev {
+    margin-right: 30px;
+}
+
+.active-slide {
+    display: block !important;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 500px;
+    -webkit-transform: translate(-50%, -50%);
+    /* Safari and Chrome */
+    -moz-transform: translate(-50%, -50%);
+    /* Firefox */
+    -ms-transform: translate(-50%, -50%);
+    /* IE 9 */
+    -o-transform: translate(-50%, -50%);
+    /* Opera */
+    transform: translate(-50%, -50%);
+}
+
+.slider-dots li {
+    color: #bbbcbc;
+    display: inline;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+    color: #363636;
+}
+
+#filmmates {
+    position: absolute;
+    top: 0;
+    left: 33.3%;
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#react-app {
+    position: absolute;
+    top: 0;
+    left: 66.6%;
+    width: 33.4%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#pics {
+    position: absolute;
+    top: 50;
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#graphics {
+    position: absolute;
+    top: 50;
+    left: 33.3%;
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    margin: 0;
+    padding: 0;
+    right: 80px;
+}
+
+.close-button a {
+    font-size: 18px;
+    color: #919191;
+    display: block;
+    line-height: 18px;
+    height: 18px;
+    position: relative;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+.close-button a i {
+    margin: 0;
+    padding: 0;
 }

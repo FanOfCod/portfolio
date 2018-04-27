@@ -157,6 +157,24 @@ body {
     color: rgb(118, 118, 118)
 }
 
+#homepage h1 span {
+    font-family: Montserrat;
+    letter-spacing: .10em;
+    font-size: 120%;
+    font-weight: 900;
+    color: rgb(123, 123, 123);
+    text-transform: uppercase;
+}
+
+#homepage p span {
+    font-family: Montserrat;
+    /* letter-spacing: .15em; */
+    font-size: 110%;
+    font-weight: 600;
+    color: rgb(95, 95, 95);
+    text-transform: uppercase;
+}
+
 .cube {
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
@@ -207,7 +225,7 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 30%;
+    width: 40%;
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
@@ -406,21 +424,20 @@ body {
 }
 
 .description {
-    visibility: hidden;
-    opacity: 0;
-    /* transition effect. not necessary */
-    transition: opacity .2s, visibility .2s;
+    position: absolute;
+    top: 0;
     padding: 0;
     margin: 0;
     padding-left: 8px;
-    color: #424242;
+    color: #444444;
     font-size: 8px;
     font-family: roboto;
-    z-index: 2;
     width: 100%;
-    height: 20px;
+    max-height: 0;
+    transition: max-height 0.7s ease-in;
     line-height: 20px;
-    background-color: #808080;
+    background-color: #b3b3b3;
+    overflow: hidden;
 }
 
 .view-project {
@@ -461,9 +478,10 @@ body {
     opacity: 1;
 }
 
-.project:hover .description {
-    visibility: visible;
-    opacity: 0.9;
+.project:hover div {
+    max-height: 20px;
+    z-index: 2;
+    opacity: 1 !important;
 }
 
 .project:hover img {
@@ -480,6 +498,7 @@ body {
 
 .project img {
     opacity: 0.5;
+    z-index: 0;
 }
 
 .project:hover img {
@@ -492,7 +511,7 @@ body {
     -o-transform: scale(1.25);
     /* Opera */
     transform: scale(1.25);
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 
@@ -517,13 +536,14 @@ body {
     height: 100%
 }
 
-.frame {
+
+/* .frame {
     margin-left: auto;
     margin-right: auto;
     background-color: red;
     height: 500px;
     width: 754px;
-}
+} */
 
 .slider-nav {
     text-align: center;
@@ -564,22 +584,23 @@ body {
 
 .slide {
     display: none;
+    height: 500px;
     overflow: hidden;
     position: absolute;
-    top: 50%;
     left: 50%;
-    width: 100%;
-    height: 500px;
-    -webkit-transform: translate(-50%, -50%);
-    /* Safari and Chrome */
-    -moz-transform: translate(-50%, -50%);
-    /* Firefox */
-    -ms-transform: translate(-50%, -50%);
-    /* IE 9 */
-    -o-transform: translate(-50%, -50%);
-    /* Opera */
+    top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
+
+
+/* .frame {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    height: 500px;
+    width: 754px;
+} */
 
 .slider-dots li {
     color: #bbbcbc;

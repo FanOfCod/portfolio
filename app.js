@@ -23,41 +23,46 @@ $(document).ready(function () {
 	
 	$('.arrow-next').click(function() {
 		
-		
-		var currentSlide = $('.active-slide');
+		var slidetype = $(this).data("slidetype");
+		console.log(this);
+		console.log(slidetype);
+
+		//var slidetype = $('#' + $(this).data("slidetype"));
+		var currentSlide = $('.active-slide-' + slidetype);
 		var nextSlide = currentSlide.next();
 		
-		var currentDot = $('.active-dot');
-		var nextDot = currentDot.next('.dot');
+		var currentDot = $('.active-dot-'+ slidetype);
+		var nextDot = currentDot.next('.dot-' + slidetype );
 
 		console.log(currentSlide);
 
 
 		if(nextSlide.length === 0) {
 			console.log('hi')
-		  nextSlide = $('.slide').first();
-		nextDot = $('.dot').first(); }
+		  nextSlide = $('.slide-' + slidetype ).first();
+		nextDot = $('.dot-'+ slidetype).first(); }
 		    
-		currentSlide.fadeOut(600).removeClass('active-slide');
-		nextSlide.fadeIn(600).addClass('active-slide');
+		currentSlide.fadeOut(600).removeClass('active-slide-' +slidetype);
+		nextSlide.fadeIn(600).addClass('active-slide-' + slidetype);
 
-		currentDot.removeClass('active-dot');
-		nextDot.addClass('active-dot');
+		currentDot.removeClass('active-dot-' + slidetype);
+		nextDot.addClass('active-dot-' +slidetype);
 		
 	});
 	
 	$('.arrow-prev').click(function() {
+		console.log(slidetype)
 		
-		
-		var currentSlide = $('.active-slide');
+		var slidetype = $(this).data("slidetype");
+		var currentSlide = $('.active-slide-' + slidetype);
 		var prevSlide = currentSlide.prev();
 		
-		var currentDot = $('.active-dot');
+		var currentDot = $('.active-dot-' + slidetype);
 		var prevDot = currentDot.prev();
 		
 		 if(prevSlide.length === 0) {
-			prevSlide = $('.slide').last();
-			prevDot = $('.dot').last();
+			prevSlide = $('.slide-'+ slidetype).last();
+			prevDot = $('.dot-' + slidetype).last();
 			}
 		
 	
@@ -66,8 +71,8 @@ $(document).ready(function () {
 		
 		
 		
-		currentDot.removeClass('active-dot');
-		prevDot.addClass('active-dot');
+		currentDot.removeClass('active-dot-'+slidetype);
+		prevDot.addClass('active-dot-' +slidetype);
 	
 	});
 	

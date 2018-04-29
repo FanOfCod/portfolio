@@ -14,6 +14,24 @@ $(document).ready(function () {
 		$('.slider-nav').fadeIn(300);
 
 	});
+	$("#sponsorship").click(function() {
+		console.log('hi');
+
+		$('.sponsorship-container').css("display", "block");
+		$('.slider-nav').fadeIn(300);
+
+	});
+	$("#react-app").click(function() {
+		console.log('hi');
+
+		$(this).find('.view-project').html('The project is not here yet')
+
+
+	});
+	$('.view-project').mouseleave( function() {
+
+		$(".view-project").html('VIEW PROJECT');
+	});
 
 	$('.close-button').click(function() {
 		$(this).parent().parent().css("display", "none");
@@ -66,8 +84,8 @@ $(document).ready(function () {
 			}
 		
 	
-		currentSlide.fadeOut(600).removeClass('active-slide');
-		prevSlide.fadeIn(600).addClass('active-slide');
+		currentSlide.fadeOut(600).removeClass('active-slide-'+slidetype);
+		prevSlide.fadeIn(600).addClass('active-slide-'+slidetype);
 		
 		
 		

@@ -518,7 +518,8 @@ body {
 /* PICS CONTAINER */
 
 .pics-container,
-.mockup-container {
+.mockup-container,
+.sponsorship-container {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -546,45 +547,69 @@ body {
 } */
 
 .slider-nav {
-    text-align: center;
-    margin-top: 60px;
+    /*text-align: center;*/
+    /*margin-top: 60px;*/
     position: absolute;
-    top: 80%;
+    bottom: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 33.6px;
     display: none;
+}
+
+.slider-nav a img {
+    height: 15px;
+    margin: 9.3px;
+    padding: 0;
+    display: inline-block;
 }
 
 .slider-dots {
     list-style: none;
     display: inline-block;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
+    height: 33.6px;
 }
 
 .slider-dots li {
-    display: inline;
-    font-size: 20px;
+    /*line-height: 15px;*/
+    display: inline-block;
+    font-size: 30px;
+    padding: 0;
     margin-right: 5px;
     color: #bbbcbc;
-    margin-bottom: 20px;
+    line-height: 33.6px;
 }
 
 .arrow-next {
-    margin-left: 30px;
+    margin: 0;
+    padding: 0;
+    /* margin-left: 30px;*/
+    position: absolute;
+    top: 0;
+    right: -33.6px;
 }
 
 .arrow-prev {
-    margin-right: 30px;
+    margin: 0;
+    padding: 0;
+    /* margin-right: 30px;*/
+    position: absolute;
+    top: 0;
+    left: -33.6px;
 }
 
 .active-slide-mockup,
-.active-slide-pics {
+.active-slide-pics,
+.active-slide-sponsorship {
     display: block !important;
     width: 100%;
 }
 
 .slide-mockup,
-.slide-pics {
+.slide-pics,
+.slide-sponsorship {
     display: none;
     height: 500px;
     overflow: hidden;
@@ -604,15 +629,9 @@ body {
     width: 754px;
 } */
 
-.slider-dots li {
-    color: #bbbcbc;
-    display: inline;
-    font-size: 30px;
-    margin-right: 5px;
-}
-
 .slider-dots li.active-dot-mockup,
-.slider-dots li.active-dot-pics {
+.slider-dots li.active-dot-pics,
+.slider-dots li.active-dot-sponsorship {
     color: #363636;
 }
 
@@ -646,6 +665,15 @@ body {
     position: absolute;
     top: 50;
     left: 33.3%;
+    width: 33.3%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#sponsorship {
+    position: absolute;
+    top: 50;
+    left: 66.6%;
     width: 33.3%;
     height: 100%;
     overflow: hidden;

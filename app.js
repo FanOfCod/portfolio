@@ -21,6 +21,13 @@ $(document).ready(function () {
 		$('.slider-nav').fadeIn(300);
 
 	});
+	$("#graphics").click(function() {
+		console.log('hi');
+
+		$('.graphics-container').css("display", "block");
+		$('.slider-nav').fadeIn(300);
+
+	});
 	$("#react-app").click(function() {
 		console.log('hi');
 

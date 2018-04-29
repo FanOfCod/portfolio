@@ -14,10 +14,10 @@ $(document).ready(function () {
 		$('.slider-nav').fadeIn(300);
 
 	});
-	$("#sponsorship").click(function() {
+	$("#proposal").click(function() {
 		console.log('hi');
 
-		$('.sponsorship-container').css("display", "block");
+		$('.proposal-container').css("display", "block");
 		$('.slider-nav').fadeIn(300);
 
 	});

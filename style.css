@@ -535,7 +535,7 @@ body {
 
 .pics-container,
 .mockup-container,
-.sponsorship-container,
+.proposal-container,
 .graphics-container {
     width: 100%;
     height: 100%;
@@ -619,7 +619,7 @@ body {
 
 .active-slide-mockup,
 .active-slide-pics,
-.active-slide-sponsorship,
+.active-slide-proposal,
 .active-slide-graphics {
     display: block !important;
     width: 100%;
@@ -627,7 +627,7 @@ body {
 
 .slide-mockup,
 .slide-pics,
-.slide-sponsorship,
+.slide-proposal,
 .slide-graphics {
     display: none;
     height: 500px;
@@ -650,7 +650,7 @@ body {
 
 .slider-dots li.active-dot-mockup,
 .slider-dots li.active-dot-pics,
-.slider-dots li.active-dot-sponsorship,
+.slider-dots li.active-dot-proposal,
 .slider-dots li.active-dot-graphics {
     color: #363636;
 }
@@ -673,7 +673,7 @@ body {
     overflow: hidden;
 }
 
-#sponsorship {
+#proposal {
     position: absolute;
     top: 50;
     width: 33.3%;

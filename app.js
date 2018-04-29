@@ -31,7 +31,7 @@ $(document).ready(function () {
 	$("#react-app").click(function() {
 		console.log('hi');
 
-		$(this).find('.view-project').html('The project is not here yet')
+		$(this).find('.view-project').html('THE PROJECT IS NOT HERE YET')
 
 
 	});
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
 		$('.email').mouseleave( function() {
 
-			$(".email b").html('copy email');
+			$(".email b").html('copy');
 		});
 	}
 

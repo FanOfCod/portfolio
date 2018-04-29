@@ -342,7 +342,7 @@ body {
 
 .names-programs {
     color: rgb(177, 177, 177);
-    font-family: monospace;
+    font-family: Roboto;
     font-size: 0.7em;
 }
 
@@ -382,9 +382,25 @@ body {
     right: 95%;
 }
 
+
+/* about*/
+
 #about {
     background: #181818;
     color: rgb(118, 118, 118)
+}
+
+.pic-of-me {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    will-change: contents;
+    opacity: 0.5;
 }
 
 
@@ -657,7 +673,7 @@ body {
     overflow: hidden;
 }
 
-#pics {
+#sponsorship {
     position: absolute;
     top: 50;
     width: 33.3%;
@@ -674,7 +690,7 @@ body {
     overflow: hidden;
 }
 
-#sponsorship {
+#pics {
     position: absolute;
     top: 50;
     left: 66.6%;

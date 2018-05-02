@@ -122,6 +122,7 @@ $(document).ready(function () {
 		});
 	}
 
+
 	span.addEventListener("copy", function (event) {
 		event.preventDefault();
 		if (event.clipboardData) {

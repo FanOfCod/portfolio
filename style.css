@@ -424,7 +424,7 @@ body {
     height: 100%;
     position: absolute;
     top: 0;
-    right: 10%;
+    right: 80px;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-animation-fill-mode: both;
@@ -585,7 +585,7 @@ body {
 }
 
 .frame {
-    max-height: 500;
+    max-height: 50%;
 }
 
 .slider-nav {
